@@ -4,7 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import "./ChatInterface.css"; // Import your custom CSS for styling and animations
 
-const API_URL = "http://localhost:4000/api/input"; // Replace with your API URL
+const API_URL = "https://ai-chat-bot-2ctf.vercel.app/api/input"; // Replace with your API URL
 
 function ChatInterface() {
   const [inputMessage, setInputMessage] = useState("");
