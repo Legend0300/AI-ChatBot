@@ -9,6 +9,7 @@ const API_URL = "http://localhost:4000/api/input"; // Replace with your API URL
 function ChatInterface() {
   const [inputMessage, setInputMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const [mute, setMute] = useState(false);
 
   useEffect(() => {
     fetchVoices();
@@ -50,10 +51,12 @@ function ChatInterface() {
       const botMessage = { content: botReply, sender: "bot" };
       setMessages((prevMessages) => [...prevMessages, botMessage]);
 
-      if (speechSynthesis && speechSynthesis.speaking) {
-        speechSynthesis.cancel();
+      if (!mute) {
+        if (speechSynthesis && speechSynthesis.speaking) {
+          speechSynthesis.cancel();
+        }
+        speakMessage(botReply);
       }
-      speakMessage(botReply);
     } catch (error) {
       console.error(error);
       // Handle the error appropriately (e.g., display an error message)
@@ -76,6 +79,10 @@ function ChatInterface() {
   const handleNewChat = () => {
     setInputMessage("");
     setMessages([]);
+  };
+
+  const handleMuteToggle = () => {
+    setMute(!mute);
   };
 
   return (
@@ -113,6 +120,9 @@ function ChatInterface() {
           </button>
           <button className="btn btn-danger" type="button" onClick={handleNewChat}>
             New Chat
+          </button>
+          <button className="btn btn-secondary" type="button" onClick={handleMuteToggle}>
+            {mute ? "Unmute" : "Mute"}
           </button>
         </div>
       </form>
