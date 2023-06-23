@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+Chat Interface React App
+This is a Chat Interface React application that allows users to have conversations with a chatbot. The app sends user messages to an API endpoint and displays the responses from the chatbot in real-time. It also provides features such as speech synthesis and muting functionality.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Requirements
+To run the Chat Interface React App, you need to have the following:
 
-## Available Scripts
+Node.js installed on your machine
+API URL for the chatbot endpoint
+Usage
+Follow the steps below to run the Chat Interface React App:
 
-In the project directory, you can run:
+Clone the repository or download the source code.
 
-### `npm start`
+Open a terminal and navigate to the project directory.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install the dependencies by running the following command:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+npm install
+Open the ChatInterface.js file and replace the API_URL constant with your chatbot API URL.
 
-### `npm test`
+Start the development server by running the following command:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+npm start
+Open your web browser and visit http://localhost:3000 to see the Chat Interface React App in action.
 
-### `npm run build`
+Features
+Messaging
+Users can type messages in the input field and send them by clicking the "Send" button.
+The app sends the user's message to the chatbot API and displays the bot's response in real-time.
+User messages are displayed on the left side, and bot messages are displayed on the right side of the chat container.
+Speech Synthesis
+The app supports speech synthesis, allowing the bot's responses to be spoken out loud.
+Users can click the "Speak" button next to a bot's message to have it spoken using the system's text-to-speech capabilities.
+The app automatically selects a Japanese voice for speech synthesis if available.
+New Chat
+Users can start a new chat session by clicking the "New Chat" button.
+This clears the chat history and resets the input field.
+Mute Toggle
+Users can mute or unmute the speech synthesis functionality by clicking the "Mute" button.
+When muted, the bot's responses are not spoken out loud.
+Customization
+You can customize the appearance and behavior of the Chat Interface React App by modifying the CSS and JavaScript code.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To change the styling and animations, modify the ChatInterface.css file.
+To add or modify functionality, edit the ChatInterface.js file.
+Error Handling
+In case of any errors during the API request or speech synthesis, the app logs the error to the console. You can handle these errors as per your requirements, such as displaying an error message to the user.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Acknowledgements
+The Chat Interface React App was created using React, Axios, and React Transition Group.
