@@ -1,0 +1,120 @@
+/* CSS for ChatInterface */
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.message-list {
+  width: 100%;
+}
+
+.message {
+  background-color: #ebebeb;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.message.user {
+  align-self: flex-start; /* Updated: Align user messages to the left */
+  background-color: #007bff;
+  color: #fff;
+}
+
+.message.bot {
+  align-self: flex-end; /* Updated: Align bot messages to the right */
+  background-color: #ebebeb;
+}
+
+.input-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-group {
+  width: 100%;
+}
+
+/* CSS for Animations using react-transition-group */
+.message-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.message-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* CSS for Themes */
+/* Light Theme */
+.light-theme {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.light-theme .message {
+  background-color: #ebebeb;
+}
+
+.light-theme .message.user {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.light-theme .message.bot {
+  background-color: #ebebeb;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+.dark-theme .message {
+  background-color: #444;
+}
+
+.dark-theme .message.user {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.dark-theme .message.bot {
+  background-color: #444;
+}
+
+.btn-danger {
+  margin-left: 10px; /* Add some margin to separate it from the Send button */
+  background-color: #ff0000; /* Set a custom background color */
+  color: #fff; /* Set a custom text color */
+  border: none; /* Remove the button border */
+  padding: 8px 12px; /* Adjust the padding as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+  font-weight: bold; /* Set the font weight to bold */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+  /* Add hover styles */
+  &:hover {
+    background-color: #ff3333; /* Set a custom background color on hover */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+  }
+
+  /* Add focus styles */
+  &:focus {
+    outline: none; /* Remove the default button focus outline */
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3); /* Add a custom focus outline */
+  }
+}
